@@ -1,0 +1,11 @@
+<div>
+  <ul [ngStyle]="{backgroundColor: modifLove(article)}" class="list-group-item" *ngFor="let article of post">
+    <li class="date">{{article.created_at | date: 'short' }}</li>
+    <li><h2>{{article.title}}</h2></li>
+    <li>{{article.content}}</li>
+    <div class="bouton">
+      <button (click)="plusLove(article)" class="btn btn-success"> Love! </button>
+      <button (click)="moinsLove(article)" class="btn btn-danger">Don't Love!</button>
+    </div>
+  </ul>
+</div>
